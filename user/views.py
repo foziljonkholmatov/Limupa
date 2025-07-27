@@ -44,5 +44,5 @@ def login_page(request):
 def logout_page(request):
     logout(request)
     messages.info(request, 'Exiting...')
-    return redirect('pages:')
+    return redirect('pages:home')
 
