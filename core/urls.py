@@ -17,13 +17,13 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from products.views import home_page_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_page_view)
+    path('', include('pages.urls', namespace='pages')),
+    # path('user/', include('user.urls', namespace='user'))
 ]
 
 
