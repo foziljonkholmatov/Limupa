@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-04 22:27+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\core\settings.py:93
+msgid "English"
+msgstr "Ingliz tili"
+
+#: .\core\settings.py:94
+msgid "Uzbek"
+msgstr "O'zbek"
+
+#: .\pages\models.py:5
+msgid "created_at"
+msgstr "Yartilgan vaqti"
+
+#: .\pages\models.py:6
+msgid "updated_at"
+msgstr "Yangilangan vaqti"
+
+#: .\pages\models.py:13
+msgid "name"
+msgstr "Nomi"
+
+#: .\pages\models.py:14
+msgid "email"
+msgstr ""
+
+#: .\pages\models.py:15
+msgid "subject"
+msgstr "Qisqa ma'lumot"
+
+#: .\pages\models.py:16
+msgid "message"
+msgstr "Habar"
+
+#: .\pages\models.py:17
+msgid "is_read"
+msgstr "O'qilganmi"
+
+#: .\pages\models.py:24
+msgid "contact"
+msgstr "Aloqa"
+
+#: .\pages\models.py:25
+msgid "contacts"
+msgstr "Aloqalar"
+
+#: .\templates\layout\header-home.html:238
+msgid "Home"
+msgstr "Asosiy"
+
+#: .\templates\layout\header-home.html:240
+msgid "Shop"
+msgstr "Do'kon"
+
+#: .\templates\layout\header-home.html:242
+msgid "Blogs"
+msgstr "Bloglar"
+
+#: .\templates\layout\header-home.html:244
+msgid "About"
+msgstr "Biz haqimizda"
+
+#: .\templates\layout\header-home.html:246
+#, fuzzy
+#| msgid "contact"
+msgid "Contact"
+msgstr "Aloqa"
+
+#: .\templates\pages\about-us.html:25
+msgid "Provide Best"
+msgstr "Eng yaxshisini taqdim etamiz"
+
+#: .\templates\pages\about-us.html:25
+msgid "Product For You"
+msgstr "Maxsulotlarimiz siz uchun"
+
+#: .\templates\pages\about-us.html:26
+msgid ""
+"\n"
+"                                <p>We provide the best Beard oile all over "
+"the world. We are the worldd best store in indi for Beard Oil. You can buy "
+"our product without any hegitation because they truste us and buy our "
+"product without any hagitation because they belive and always happy buy our "
+"product.</p>\n"
+"                                <p>Some of our customer say’s that they "
+"trust us and buy our product without any hagitation because they belive us "
+"and always happy to buy our product.</p>\n"
+"                                <p>We provide the beshat they trusted us and "
+"buy our product without any hagitation because they belive us and always "
+"happy to buy.</p>\n"
+"                                "
+msgstr ""
+"\n"
+"                                <p>Limupa elektronika do‘koni — bu zamonaviy texnologiyalarni sevuvchilar uchun ishonchli  "
+"va qulay onlayn xarid platformasi. "
+"Biz eng yangi smartfonlar, noutbuklar, "
+"maishiy texnika, gadjetlar va boshqa turdagi elektronika mahsulotlarini taqdim "
+"etamiz. </p>\n"
+"                                <p>Mijozlarimizga sifatli mahsulotlarni raqobatbardosh narxlarda "
+" taklif qilish bilan birga, tezkor yetkazib berish va "
+"mijozlarga do‘stona xizmat ko‘rsatishni o‘z oldimizga maqsad qilganmiz.</p>\n"
+"                                <p>Bizning maqsadimiz – sizga eng so‘nggi texnologiyalarni qulay va xavfsiz "
+"tarzda yetkazib berish. Siz buyurtmani uyda yoki ofisda o‘tirgan holda rasmiylashtirib, qisqa vaqt "
+" ichida kerakli mahsulotingizga ega bo‘lishingiz mumkin.</p>\n"
+
+#: .\user\manager.py:16
+msgid "The Email must be set"
+msgstr ""
+
+#: .\user\manager.py:32
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: .\user\manager.py:34
+msgid "Superuser must have is_superuser=True."
+msgstr ""
