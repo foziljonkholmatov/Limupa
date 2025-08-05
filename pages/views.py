@@ -38,6 +38,11 @@ def shop_list_view(request):
 def blogs_view(request):
     return render(request, 'pages/blogs.html')
 
+
+def shopping_cart_view(request):
+    return render(request, 'shop/shopping-cart.html')
+
+
 def contact_pages_view(request):
     if request.method == 'POST':
         form = ContactModelForm(request.POST)

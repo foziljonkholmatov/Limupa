@@ -43,8 +43,8 @@
                             <!-- Begin Language Area -->
                             <li>
                                 {% get_current_language as lang %}
-                                <span class="language-selector-wrapper">{% trans 'Language:' %}</span>
-                                <div class="ht-language-trigger"><span>{{ lang }}</span></div>
+                                <span class="language-selector-wrapper">{% trans 'Language' %}:</span>
+                                <div class="ht-language-trigger"><span>{{ lang|upper }}</span></div>
                                 <div class="language ht-language">
                                     {% get_available_languages as all_langs %}
                                     <ul class="ht-setting-list">
@@ -211,11 +211,11 @@
                                     </ul>
                                     <p class="minicart-total">SUBTOTAL: <span>£80.00</span></p>
                                     <div class="minicart-button">
-                                        <a href="shopping-cart.html"
+                                        <a href="{% url 'pages:cart' %}"
                                            class="li-button li-button-fullwidth li-button-dark">
                                             <span>View Full Cart</span>
                                         </a>
-                                        <a href="checkout.html" class="li-button li-button-fullwidth">
+                                        <a href="{% url 'pages:checkout' %}" class="li-button li-button-fullwidth">
                                             <span>Checkout</span>
                                         </a>
                                     </div>

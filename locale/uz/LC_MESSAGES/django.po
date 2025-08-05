@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-04 22:27+0500\n"
+"POT-Creation-Date: 2025-08-05 20:26+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,23 +62,27 @@ msgstr "Aloqa"
 msgid "contacts"
 msgstr "Aloqalar"
 
-#: .\templates\layout\header-home.html:238
+#: .\templates\layout\header-home.html:46
+msgid "Language"
+msgstr "Til"
+
+#: .\templates\layout\header-home.html:243
 msgid "Home"
 msgstr "Asosiy"
 
-#: .\templates\layout\header-home.html:240
+#: .\templates\layout\header-home.html:245
 msgid "Shop"
 msgstr "Do'kon"
 
-#: .\templates\layout\header-home.html:242
+#: .\templates\layout\header-home.html:247
 msgid "Blogs"
 msgstr "Bloglar"
 
-#: .\templates\layout\header-home.html:244
+#: .\templates\layout\header-home.html:249
 msgid "About"
 msgstr "Biz haqimizda"
 
-#: .\templates\layout\header-home.html:246
+#: .\templates\layout\header-home.html:251
 msgid "Contact"
 msgstr "Aloqa"
 
@@ -107,17 +111,18 @@ msgid ""
 "                                "
 msgstr ""
 "\n"
-"                                <p>Limupa elektronika do‘koni — bu zamonaviy texnologiyalarni sevuvchilar uchun ishonchli  "
-"va qulay onlayn xarid platformasi. "
-"Biz eng yangi smartfonlar, noutbuklar, "
-"maishiy texnika, gadjetlar va boshqa turdagi elektronika mahsulotlarini taqdim "
-"etamiz. </p>\n"
-"                                <p>Mijozlarimizga sifatli mahsulotlarni raqobatbardosh narxlarda "
-" taklif qilish bilan birga, tezkor yetkazib berish va "
-"mijozlarga do‘stona xizmat ko‘rsatishni o‘z oldimizga maqsad qilganmiz.</p>\n"
-"                                <p>Bizning maqsadimiz – sizga eng so‘nggi texnologiyalarni qulay va xavfsiz "
-"tarzda yetkazib berish. Siz buyurtmani uyda yoki ofisda o‘tirgan holda rasmiylashtirib, qisqa vaqt "
-" ichida kerakli mahsulotingizga ega bo‘lishingiz mumkin.</p>\n"
+"                                <p>Limupa elektronika do‘koni — bu zamonaviy "
+"texnologiyalarni sevuvchilar uchun ishonchli  va qulay onlayn xarid "
+"platformasi. Biz eng yangi smartfonlar, noutbuklar, maishiy texnika, "
+"gadjetlar va boshqa turdagi elektronika mahsulotlarini taqdim etamiz. </p>\n"
+"                                <p>Mijozlarimizga sifatli mahsulotlarni "
+"raqobatbardosh narxlarda  taklif qilish bilan birga, tezkor yetkazib berish "
+"va mijozlarga do‘stona xizmat ko‘rsatishni o‘z oldimizga maqsad qilganmiz.</"
+"p>\n"
+"                                <p>Bizning maqsadimiz – sizga eng so‘nggi "
+"texnologiyalarni qulay va xavfsiz tarzda yetkazib berish. Siz buyurtmani "
+"uyda yoki ofisda o‘tirgan holda rasmiylashtirib, qisqa vaqt  ichida kerakli "
+"mahsulotingizga ega bo‘lishingiz mumkin.</p>\n"
 
 #: .\user\manager.py:16
 msgid "The Email must be set"
