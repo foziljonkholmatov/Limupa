@@ -79,8 +79,6 @@ msgid "About"
 msgstr "Biz haqimizda"
 
 #: .\templates\layout\header-home.html:246
-#, fuzzy
-#| msgid "contact"
 msgid "Contact"
 msgstr "Aloqa"
 
