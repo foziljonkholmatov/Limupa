@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-05 20:26+0500\n"
+"POT-Creation-Date: 2025-08-08 00:03+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,27 +62,59 @@ msgstr ""
 msgid "contacts"
 msgstr ""
 
+#: .\templates\layout\header-home.html:13
+msgid "Telephone Enquiry"
+msgstr ""
+
+#: .\templates\layout\header-home.html:24
+msgid "Logout"
+msgstr ""
+
+#: .\templates\layout\header-home.html:26
+msgid "Login"
+msgstr ""
+
+#: .\templates\layout\header-home.html:33
+msgid "Currency"
+msgstr ""
+
 #: .\templates\layout\header-home.html:46
 msgid "Language"
 msgstr ""
 
-#: .\templates\layout\header-home.html:243
+#: .\templates\layout\header-home.html:99
+msgid "All"
+msgstr ""
+
+#: .\templates\layout\header-home.html:170
+msgid "Enter your search key"
+msgstr ""
+
+#: .\templates\layout\header-home.html:227
+msgid "View Full Cart"
+msgstr ""
+
+#: .\templates\layout\header-home.html:230
+msgid "Checkout"
+msgstr ""
+
+#: .\templates\layout\header-home.html:254
 msgid "Home"
 msgstr ""
 
-#: .\templates\layout\header-home.html:245
+#: .\templates\layout\header-home.html:256
 msgid "Shop"
 msgstr ""
 
-#: .\templates\layout\header-home.html:247
+#: .\templates\layout\header-home.html:258
 msgid "Blogs"
 msgstr ""
 
-#: .\templates\layout\header-home.html:249
+#: .\templates\layout\header-home.html:260
 msgid "About"
 msgstr ""
 
-#: .\templates\layout\header-home.html:251
+#: .\templates\layout\header-home.html:262
 msgid "Contact"
 msgstr ""
 

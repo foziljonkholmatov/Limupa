@@ -38,6 +38,9 @@ def shop_list_view(request):
 def blogs_view(request):
     return render(request, 'pages/blogs.html')
 
+def blogs_detail_view(request):
+    return render(request, 'pages/blog-details.html')
+
 
 def shopping_cart_view(request):
     return render(request, 'shop/shopping-cart.html')
