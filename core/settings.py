@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'products',
     'pages',
     'user',
+    'blogs',
 ]
 
 MIDDLEWARE = [
@@ -54,9 +55,11 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'basket.context_processors.basket',
             ],
         },
     },
@@ -85,7 +88,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-AUTH_USER_MODEL = 'user.UserModel'
 
 LANGUAGE_CODE = 'en'
 
@@ -104,6 +106,9 @@ USE_I18N = True
 
 USE_TZ = True
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
@@ -111,3 +116,18 @@ STATICFILES_DIRS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "fozil77739@gmail.com"
+EMAIL_HOST_PASSWORD = "anit mhqb iack jmbs"
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+BASKET_SESSION_ID = 'basket'
+
+SESSION_COOKIE_AGE = 86400  # 1 day
+SESSION_SAVE_EVERY_REQUEST = True

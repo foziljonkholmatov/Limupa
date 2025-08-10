@@ -23,19 +23,27 @@
                             <div class="row li-main-content">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="li-blog-single-item pb-25">
+{% for post in posts %}
                                         <div class="li-blog-banner">
-                                            <a href="{% url 'pages:blog-details' %}"><img class="img-full" src="{% static 'images/blog-banner/2.jpg' %}" alt=""></a>
+                                            <a href="{% url 'blog:blog-details' post.pk %}">
+                                                {% if post.image %}
+                                                    <img class="img-full" src="{{ post.image.url }}" alt="">
+                                                {% else %}
+                                                    <img class="img-full" src="{% static 'images/blog-banner/2.jpg' %}" alt="">
+                                                {% endif %}
+                                            </a>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
-                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'pages:blog-details' %}">blog image post</a></h3>
+                                                <h3 class="li-blog-heading pt-25">
+                                                    <a href="{% url 'blog:blog-details' post.pk %}">{{ post.title }}</a></h3>
                                                 <div class="li-blog-meta">
-                                                    <a class="author" href="#"><i class="fa fa-user"></i>Admin</a>
-                                                    <a class="comment" href="#"><i class="fa fa-comment-o"></i> 3 comment</a>
-                                                    <a class="post-time" href="#"><i class="fa fa-calendar"></i> 25 nov 2018</a>
+                                                    <a class="author" href="#"><i class="fa fa-user"></i>{{ post.author }}</a>
+                                                    <a class="comment" href="#"><i class="fa fa-comment-o"></i> {{ post.comments_count }} Comments</a>
+                                                    <a class="post-time" href="#"><i class="fa fa-calendar"></i>{{ post.created_at|date:'d M Y' }}</a>
                                                 </div>
-                                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex.</p>
-                                                <a class="read-more" href="{% url 'pages:blog-details' %}">Read More...</a>
+                                                <p>{{post.content|truncatewords:20 }}</p>
+                                                <a class="read-more" href="{% url 'blog:blog-details' post.pk %}">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -44,25 +52,25 @@
                                     <div class="li-blog-single-item pb-25">
                                         <div class="li-blog-gallery-slider slick-dot-style">
                                             <div class="li-blog-banner">
-                                                <a href="{% url 'pages:blog-details' %}"><img class="img-full" src="{% static 'images/blog-banner/1.jpg' %}" alt=""></a>
+                                                <a href="{% url 'blog:blog-details' post.pk %}"><img class="img-full" src="{% static 'images/blog-banner/1.jpg' %}" alt=""></a>
                                             </div>
                                             <div class="li-blog-banner">
-                                                <a href="{% url 'pages:blog-details' %}"><img class="img-full" src="{% static 'images/blog-banner/2.jpg' %}" alt=""></a>
+                                                <a href="{% url 'blog:blog-details' post.pk %}"><img class="img-full" src="{% static 'images/blog-banner/2.jpg' %}" alt=""></a>
                                             </div>
                                             <div class="li-blog-banner">
-                                                <a href="{% url 'pages:blog-details' %}"><img class="img-full" src="{% static 'images/blog-banner/3.jpg' %}" alt=""></a>
+                                                <a href="{% url 'blog:blog-details' post.pk %}"><img class="img-full" src="{% static 'images/blog-banner/3.jpg' %}" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
-                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'pages:blog-details' %}">blog gallery post</a></h3>
+                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'blog:blog-details' post.pk %}">blog gallery post</a></h3>
                                                 <div class="li-blog-meta">
                                                     <a class="author" href="#"><i class="fa fa-user"></i>Admin</a>
                                                     <a class="comment" href="#"><i class="fa fa-comment-o"></i> 3 comment</a>
                                                     <a class="post-time" href="#"><i class="fa fa-calendar"></i> 25 nov 2018</a>
                                                 </div>
                                                 <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex.</p>
-                                                <a class="read-more" href="{% url 'pages:blog-details' %}">Read More...</a>
+                                                <a class="read-more" href="{% url 'blog:blog-details' post.pk %}">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -74,14 +82,14 @@
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
-                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'pages:blog-details' %}">blog audio post</a></h3>
+                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'blog:blog-details' post.pk %}">blog audio post</a></h3>
                                                 <div class="li-blog-meta">
                                                     <a class="author" href="#"><i class="fa fa-user"></i>Admin</a>
                                                     <a class="comment" href="#"><i class="fa fa-comment-o"></i> 3 comment</a>
                                                     <a class="post-time" href="#"><i class="fa fa-calendar"></i> 25 nov 2018</a>
                                                 </div>
                                                 <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex.</p>
-                                                <a class="read-more" href="{% url 'pages:blog-details' %}">Read More...</a>
+                                                <a class="read-more" href="{% url 'blog:blog-details' post.pk %}">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -93,14 +101,14 @@
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
-                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'pages:blog-details' %}">blog video post</a></h3>
+                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'blog:blog-details' post.pk %}">blog video post</a></h3>
                                                 <div class="li-blog-meta">
                                                     <a class="author" href="#"><i class="fa fa-user"></i>Admin</a>
                                                     <a class="comment" href="#"><i class="fa fa-comment-o"></i> 3 comment</a>
                                                     <a class="post-time" href="#"><i class="fa fa-calendar"></i> 25 nov 2018</a>
                                                 </div>
                                                 <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex.</p>
-                                                <a class="read-more" href="{% url 'pages:blog-details' %}">Read More...</a>
+                                                <a class="read-more" href="{% url 'blog:blog-details' post.pk %}">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -108,18 +116,18 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="li-blog-single-item pb-25">
                                         <div class="li-blog-banner">
-                                            <a href="{% url 'pages:blog-details' %}"><img class="img-full" src="{% static 'images/blog-banner/5.jpg' %}" alt=""></a>
+                                            <a href="{% url 'blog:blog-details' post.pk %}"><img class="img-full" src="{% static 'images/blog-banner/5.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
-                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'pages:blog-details' %}">blog fifth post</a></h3>
+                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'blog:blog-details' post.pk %}">blog fifth post</a></h3>
                                                 <div class="li-blog-meta">
                                                     <a class="author" href="#"><i class="fa fa-user"></i>Admin</a>
                                                     <a class="comment" href="#"><i class="fa fa-comment-o"></i> 3 comment</a>
                                                     <a class="post-time" href="#"><i class="fa fa-calendar"></i> 25 nov 2018</a>
                                                 </div>
                                                 <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex.</p>
-                                                <a class="read-more" href="{% url 'pages:blog-details' %}">Read More...</a>
+                                                <a class="read-more" href="{% url 'blog:blog-details' post.pk %}">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -127,18 +135,19 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="li-blog-single-item mb-25">
                                         <div class="li-blog-banner">
-                                            <a href="{% url 'pages:blog-details' %}"><img class="img-full" src="{% static 'images/blog-banner/6.jpg' %}" alt=""></a>
+                                            <a href="{% url 'blog:blog-details' post.pk %}"><img class="img-full" src="{% static 'images/blog-banner/6.jpg' %}" alt=""></a>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
-                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'pages:blog-details' %}">blog second post</a></h3>
+                                                <h3 class="li-blog-heading pt-25"><a href="{% url 'blog:blog-details' post.pk %}">blog second post</a></h3>
                                                 <div class="li-blog-meta">
                                                     <a class="author" href="#"><i class="fa fa-user"></i>Admin</a>
                                                     <a class="comment" href="#"><i class="fa fa-comment-o"></i> 3 comment</a>
                                                     <a class="post-time" href="#"><i class="fa fa-calendar"></i> 25 nov 2018</a>
                                                 </div>
                                                 <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue condimentum rhoncus. Cras pretium arcu ex.</p>
-                                                <a class="read-more" href="{% url 'pages:blog-details' %}">Read More...</a>
+                                                <a class="read-more" href="{% url 'blog:blog-details' post.pk %}">Read More...</a>
+{% endfor %}
                                             </div>
                                         </div>
                                     </div>

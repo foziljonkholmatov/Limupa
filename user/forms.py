@@ -1,25 +1,35 @@
 from django import forms
-from user.models import UserModel
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django.db.models import Q
 
 
-class RegisterForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
-    confirm_password = forms.CharField(widget=forms.PasswordInput)
-
+class RegisterForm(UserCreationForm):
     class Meta:
-        model = UserModel
-        fields = ['email', 'username', 'password']
-
-    def clean(self):
-        cleaned_data = super().clean()
-        password = cleaned_data.get('password')
-        confirm_password = cleaned_data.get('confirm_password')
-
-        if password != confirm_password:
-            raise ValueError('Password does not match')
-        return cleaned_data
+        model = User
+        fields = ['email', 'username', 'password1', 'password2']
 
 
 class LoginForm(forms.Form):
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput)
+    username_or_email = forms.CharField(max_length=128)
+    password = forms.CharField(max_length=128)
+
+    def clean(self):
+        username_or_email = self.cleaned_data['username_or_email']
+        password = self.cleaned_data['password']
+        try:
+            user = User.objects.get(
+                Q(email=username_or_email) | Q(username=username_or_email)
+            )
+        except User.DoesNotExist:
+            raise forms.ValidationError("Username or password is invalid")
+
+        credentials = {"username": user.username, "password": password}
+        authenticated_user = authenticate(**credentials)
+        if authenticated_user is not None:
+            self.cleaned_data["user"] = authenticated_user
+        else:
+            raise forms.ValidationError("Username or password is invalid")
+
+        return self.cleaned_data

@@ -12,20 +12,19 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ContactModel',
+            name='ProductModel',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='created_at')),
                 ('updated_at', models.DateTimeField(auto_now=True, verbose_name='updated_at')),
-                ('name', models.CharField(max_length=60, verbose_name='name')),
-                ('email', models.EmailField(max_length=254, verbose_name='email')),
-                ('subject', models.CharField(blank=True, max_length=255, null=True, verbose_name='subject')),
-                ('message', models.TextField(verbose_name='message')),
-                ('is_read', models.BooleanField(default=False, verbose_name='is_read')),
+                ('name', models.CharField(max_length=255)),
+                ('reference', models.CharField(blank=True, max_length=100, null=True)),
+                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
+                ('description', models.TextField(blank=True, null=True)),
+                ('image', models.ImageField(blank=True, null=True, upload_to='products/')),
             ],
             options={
-                'verbose_name': 'contact',
-                'verbose_name_plural': 'contacts',
+                'abstract': False,
             },
         ),
     ]

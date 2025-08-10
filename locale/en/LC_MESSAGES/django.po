@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-08 00:03+0500\n"
+"POT-Creation-Date: 2025-08-09 15:59+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\core\settings.py:93
+#: .\core\settings.py:94
 msgid "English"
 msgstr ""
 
-#: .\core\settings.py:94
+#: .\core\settings.py:95
 msgid "Uzbek"
 msgstr ""
 
@@ -62,6 +62,179 @@ msgstr ""
 msgid "contacts"
 msgstr ""
 
+#: .\templates\layout\footer.html:17
+msgid "Free Delivery"
+msgstr ""
+
+#: .\templates\layout\footer.html:18
+msgid "And free returns. See checkout for delivery dates."
+msgstr ""
+
+#: .\templates\layout\footer.html:30
+msgid "Safe Payment"
+msgstr ""
+
+#: .\templates\layout\footer.html:31
+msgid "Pay with the worlds most popular and secure payment methods."
+msgstr ""
+
+#: .\templates\layout\footer.html:43
+msgid "Shop with Confidence"
+msgstr ""
+
+#: .\templates\layout\footer.html:44
+msgid "Our Buyer Protection covers your purchasefrom click to delivery."
+msgstr ""
+
+#: .\templates\layout\footer.html:56
+msgid "24/7 Help Center"
+msgstr ""
+
+#: .\templates\layout\footer.html:57
+msgid "Have a question? Call a Specialist or chat online."
+msgstr ""
+
+#: .\templates\layout\footer.html:78
+msgid ""
+"\n"
+"                                Limupa. All rights reserved.\n"
+"                                This site was created to provide users with "
+"quality products and useful information.\n"
+"                                "
+msgstr ""
+
+#: .\templates\layout\footer.html:86
+msgid "Address"
+msgstr ""
+
+#: .\templates\layout\footer.html:90
+msgid "Phone"
+msgstr ""
+
+#: .\templates\layout\footer.html:103
+msgid "Product"
+msgstr ""
+
+#: .\templates\layout\footer.html:105
+msgid "Prices drop"
+msgstr ""
+
+#: .\templates\layout\footer.html:106
+msgid "New products"
+msgstr ""
+
+#: .\templates\layout\footer.html:107
+msgid "Best sales"
+msgstr ""
+
+#: .\templates\layout\footer.html:108 .\templates\layout\footer.html:121
+msgid "Contact us"
+msgstr ""
+
+#: .\templates\layout\footer.html:116
+msgid "Our company"
+msgstr ""
+
+#: .\templates\layout\footer.html:118
+msgid "Delivery"
+msgstr ""
+
+#: .\templates\layout\footer.html:119
+msgid "Legal Notice"
+msgstr ""
+
+#: .\templates\layout\footer.html:120
+msgid "About us"
+msgstr ""
+
+#: .\templates\layout\footer.html:129
+msgid "Follow Us"
+msgstr ""
+
+#: .\templates\layout\footer.html:170
+msgid "Sign up to newsletter"
+msgstr ""
+
+#: .\templates\layout\footer.html:177
+msgid "Enter your email"
+msgstr ""
+
+#: .\templates\layout\footer.html:178
+msgid "Subscribe"
+msgstr ""
+
+#: .\templates\layout\footer.html:199
+msgid "Online Shopping"
+msgstr ""
+
+#: .\templates\layout\footer.html:200
+msgid "Promotions"
+msgstr ""
+
+#: .\templates\layout\footer.html:201
+msgid "My Orders"
+msgstr ""
+
+#: .\templates\layout\footer.html:202
+msgid "Help"
+msgstr ""
+
+#: .\templates\layout\footer.html:203
+msgid "Customer Service"
+msgstr ""
+
+#: .\templates\layout\footer.html:204
+msgid "Support"
+msgstr ""
+
+#: .\templates\layout\footer.html:205
+msgid "Most Populars"
+msgstr ""
+
+#: .\templates\layout\footer.html:206
+msgid "New Arrivals"
+msgstr ""
+
+#: .\templates\layout\footer.html:207
+msgid "Special Products"
+msgstr ""
+
+#: .\templates\layout\footer.html:208
+msgid "Manufacturers"
+msgstr ""
+
+#: .\templates\layout\footer.html:209
+msgid "Our Stores"
+msgstr ""
+
+#: .\templates\layout\footer.html:210
+msgid "Shipping"
+msgstr ""
+
+#: .\templates\layout\footer.html:211
+msgid "Payments"
+msgstr ""
+
+#: .\templates\layout\footer.html:212
+msgid "Warantee"
+msgstr ""
+
+#: .\templates\layout\footer.html:213 .\templates\layout\footer.html:216
+msgid "Refunds"
+msgstr ""
+
+#: .\templates\layout\footer.html:214 .\templates\layout\header-home.html:230
+msgid "Checkout"
+msgstr ""
+
+#: .\templates\layout\footer.html:215
+msgid "Discount"
+msgstr ""
+
+#: .\templates\layout\footer.html:217
+msgid "Policy Shipping"
+msgstr ""
+
 #: .\templates\layout\header-home.html:13
 msgid "Telephone Enquiry"
 msgstr ""
@@ -92,10 +265,6 @@ msgstr ""
 
 #: .\templates\layout\header-home.html:227
 msgid "View Full Cart"
-msgstr ""
-
-#: .\templates\layout\header-home.html:230
-msgid "Checkout"
 msgstr ""
 
 #: .\templates\layout\header-home.html:254

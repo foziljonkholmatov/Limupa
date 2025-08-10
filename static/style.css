@@ -1764,7 +1764,7 @@ textarea:focus {
 	font-weight: 500;
 	padding: 8px 0;
 }
-.hb-menu nav > ul > li:hover > a, 
+.hb-menu nav > ul > li:hover > a,
 .hb-menu nav > ul > li:hover > a::after {
 		color: #ffffff;
 }
@@ -3003,7 +3003,7 @@ text-align: center;
 	color: #ffffff;
 	transition: all 0.3s ease-in-out;
 }
-.li-header-4 .hb-menu nav > ul > li:hover > a, 
+.li-header-4 .hb-menu nav > ul > li:hover > a,
 .li-header-4 .hb-menu nav > ul > li:hover > a::after {
 	color: #fed700;
 }

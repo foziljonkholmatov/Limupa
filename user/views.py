@@ -1,48 +1,80 @@
+import threading
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import render, redirect
-from user.forms import LoginForm, RegisterForm
+from django.contrib.auth import login, logout
+from django.contrib.auth.models import User
+from django.contrib.auth.tokens import default_token_generator
+from django.shortcuts import redirect
+from django.urls import reverse_lazy
+from django.views import View
+from django.views.generic import FormView, TemplateView
+
+from user.forms import RegisterForm, LoginForm
+from user.utils import send_email_confirmation
 
 
-def register_view(request):
-    if request.method == 'POST':
-        form = RegisterForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            raw_password = form.cleaned_data['password']
-            user.set_password(raw_password)
+class RegisterView(FormView):
+    template_name = 'auth/login-register.html'
+    form_class = RegisterForm
+    success_url = reverse_lazy('accounts:login')
+
+    def form_valid(self, form):
+        user = form.save(commit=False)
+        user.is_active = False
+        user.save()
+
+        email_thread = threading.Thread(target=send_email_confirmation, args=(user, self.request,))
+        email_thread.start()
+
+        messages.success(self.request, "Please, confirm your email and login")
+
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, "Something getting wrong")
+        return super().form_invalid(form)
+
+
+class LoginView(FormView):
+    template_name = 'auth/login-register.html'
+    form_class = LoginForm
+    success_url = reverse_lazy('pages:home')
+
+    def form_valid(self, form):
+        login(request=self.request, user=form.cleaned_data["user"])
+        messages.success(self.request, "Please, confirm your email and login")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, "Username or password is invalid")
+        return super().form_invalid(form)
+
+
+class ConfirmEmailView(View):
+    @staticmethod
+    def get(request, uid, token):
+        try:
+            user = User.objects.get(id=uid)
+        except User.DoesNotExist:
+            messages.error(request, "User not found")
+            return redirect('accounts:login')
+
+        if default_token_generator.check_token(user, token):
+            user.is_active = True
             user.save()
-            messages.success(
-                request, 'Registration successfully!'
-            )
-            return redirect('pages:home')
-    else:
-        form = RegisterForm()
-    return render(request, 'auth/login-register.html', {'form': form})
+            messages.success(request, "Your email address is verified!")
+            return redirect(reverse_lazy('accounts:login'))
+        else:
+
+            messages.error(request, "Link is not correct")
+            return redirect(reverse_lazy('accounts:register'))
 
 
-def login_page(request):
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            cd = form.cleaned_data
-            email = cd['email']
-            password = cd['password']
-            user = authenticate(request, email=email, password=password)
-            if user is not None:
-                login(request, user)
-                messages.success(
-                    request, 'Logging in is successful!'
-                )
-                return redirect('pages:home')
-            else:
-                messages.error('Email or password wrong!')
-    else:
-        form = LoginForm()
-    return render(request, 'auth/login-register.html', {'form': form})
+class LogoutView(View):
+    @staticmethod
+    def post(request):
+        logout(request)
+        return redirect('pages:home')
 
-def logout_page(request):
-    logout(request)
-    messages.info(request, 'Exiting...')
-    return redirect('pages:home')
 
+class UserProfileView(TemplateView):
+    template_name = 'pages:home'

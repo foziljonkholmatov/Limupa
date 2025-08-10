@@ -79,8 +79,13 @@
             <div class="col-lg-7 col-md-6">
                 <div class="product-details-view-content pt-60">
                     <div class="product-info">
-                        <h2>Today is a good day Framed poster</h2>
-                        <span class="product-details-ref">Reference: demo_15</span>
+                        <h2>{{ product.name }}</h2>
+                        {% if product.reference %}
+                        <span class="product-details-ref">Reference:{{ product.reference }}</span>
+                        {% endif %}
+                        {% if product.is_new %}
+                        <span class="sticker">New</span>
+                        {% endif %}
                         <div class="rating-box pt-20">
                             <ul class="rating rating-with-review-item">
                                 <li><i class="fa fa-star-o"></i></li>
@@ -93,13 +98,9 @@
                             </ul>
                         </div>
                         <div class="price-box pt-20">
-                            <span class="new-price new-price-2">$57.98</span>
+                            <span class="new-price new-price-2">{{ product.price }}</span>
                         </div>
                         <div class="product-desc">
-                            <p>
-                                            <span>100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
-                                            </span>
-                            </p>
                         </div>
                         <div class="product-variants">
                             <div class="produt-variants-size">
@@ -190,7 +191,7 @@
         <div class="tab-content">
             <div id="description" class="tab-pane active show" role="tabpanel">
                 <div class="product-description">
-                    <span>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</span>
+                    <span>{{ product.description }}</span>
                 </div>
             </div>
             <div id="product-details" class="tab-pane" role="tabpanel">
@@ -330,7 +331,7 @@
                             <!-- single-product-wrap start -->
                             <div class="single-product-wrap">
                                 <div class="product-image">
-                                    <a href="single-product.html">
+                                    <a href="{% url 'shop:product-details' product.pk %}">
                                         <img src="{% static 'images/product/large-size/1.jpg' %}"
                                              alt="Li's Product Image">
                                     </a>
@@ -352,7 +353,8 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a>
+                                        <h4><a class="product_name" href="{% url 'shop:product-details' product.pk %}">Accusantium
+                                            dolorem1</a>
                                         </h4>
                                         <div class="price-box">
                                             <span class="new-price">$46.80</span>
@@ -376,7 +378,7 @@
                             <!-- single-product-wrap start -->
                             <div class="single-product-wrap">
                                 <div class="product-image">
-                                    <a href="single-product.html">
+                                    <a href="{% url 'shop:product-details' product.pk %}">
                                         <img src="{% static 'images/product/large-size/2.jpg' %}"
                                              alt="Li's Product Image">
                                     </a>
@@ -398,7 +400,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <h4><a class="product_name" href="single-product.html">Mug Today is a good
+                                        <h4><a class="product_name" href="{% url 'shop:product-details' product.pk %}">Mug Today is a good
                                             day</a></h4>
                                         <div class="price-box">
                                             <span class="new-price new-price-2">$71.80</span>
@@ -424,7 +426,7 @@
                             <!-- single-product-wrap start -->
                             <div class="single-product-wrap">
                                 <div class="product-image">
-                                    <a href="single-product.html">
+                                    <a href="{% url 'shop:product-details' product.pk %}">
                                         <img src="{% static 'images/product/large-size/3.jpg' %}"
                                              alt="Li's Product Image">
                                     </a>
@@ -446,7 +448,8 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a>
+                                        <h4><a class="product_name" href="{% url 'shop:product-details' product.pk %}">Accusantium
+                                            dolorem1</a>
                                         </h4>
                                         <div class="price-box">
                                             <span class="new-price">$46.80</span>
@@ -470,7 +473,7 @@
                             <!-- single-product-wrap start -->
                             <div class="single-product-wrap">
                                 <div class="product-image">
-                                    <a href="single-product.html">
+                                    <a href="{% url 'shop:product-details' product.pk %}">
                                         <img src="{% static 'images/product/large-size/4.jpg' %}"
                                              alt="Li's Product Image">
                                     </a>
@@ -492,7 +495,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <h4><a class="product_name" href="single-product.html">Mug Today is a good
+                                        <h4><a class="product_name" href="{% url 'shop:product-details' product.pk %}">Mug Today is a good
                                             day</a></h4>
                                         <div class="price-box">
                                             <span class="new-price new-price-2">$71.80</span>
@@ -518,7 +521,7 @@
                             <!-- single-product-wrap start -->
                             <div class="single-product-wrap">
                                 <div class="product-image">
-                                    <a href="single-product.html">
+                                    <a href="{% url 'shop:product-details' product.pk %}">
                                         <img src="{% static 'images/product/large-size/5.jpg' %}"
                                              alt="Li's Product Image">
                                     </a>
@@ -540,7 +543,8 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a>
+                                        <h4><a class="product_name" href="{% url 'shop:product-details' product.pk %}">Accusantium
+                                            dolorem1</a>
                                         </h4>
                                         <div class="price-box">
                                             <span class="new-price">$46.80</span>
@@ -564,7 +568,7 @@
                             <!-- single-product-wrap start -->
                             <div class="single-product-wrap">
                                 <div class="product-image">
-                                    <a href="single-product.html">
+                                    <a href="{% url 'shop:product-details' product.pk %}">
                                         <img src="{% static 'images/product/large-size/6.jpg' %}"
                                              alt="Li's Product Image">
                                     </a>
@@ -586,7 +590,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <h4><a class="product_name" href="single-product.html">Mug Today is a good
+                                        <h4><a class="product_name" href="{% url 'shop:product-details' product.pk %}">Mug Today is a good
                                             day</a></h4>
                                         <div class="price-box">
                                             <span class="new-price new-price-2">$71.80</span>
