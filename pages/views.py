@@ -18,18 +18,8 @@ def checkout_view(request):
 def about_page_view(request):
     return render(request, 'pages/about-us.html')
 
-
-
-def add_cart(request):
-    return render(request, 'shop/shopping-cart.html')
-
-
 def wishlist_view(request):
     return render(request, 'pages/wishlist.html')
-
-
-def shopping_cart_view(request):
-    return render(request, 'shop/shopping-cart.html')
 
 
 def contact_pages_view(request):

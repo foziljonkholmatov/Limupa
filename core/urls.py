@@ -28,6 +28,7 @@ urlpatterns += i18n_patterns(
     path('blog/', include(('blogs.urls', 'blogs'), namespace='blog')),
     path('shop/', include(('products.urls', 'shop'), namespace='shop')),
     path('login/', include(('user.urls', 'accounts'), namespace='accounts')),
+    path('basket/', include(('basket.urls', 'accounts'), namespace='basket')),
 
 )
 

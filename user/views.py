@@ -13,7 +13,7 @@ from user.utils import send_email_confirmation
 
 
 class RegisterView(FormView):
-    template_name = 'auth/login-register.html'
+    template_name = 'auth/register.html'
     form_class = RegisterForm
     success_url = reverse_lazy('accounts:login')
 
@@ -35,7 +35,7 @@ class RegisterView(FormView):
 
 
 class LoginView(FormView):
-    template_name = 'auth/login-register.html'
+    template_name = 'auth/login.html'
     form_class = LoginForm
     success_url = reverse_lazy('pages:home')
 

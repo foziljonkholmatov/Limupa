@@ -122,10 +122,8 @@ msgid "Phone"
 msgstr "Telefon raqam"
 
 #: .\templates\layout\footer.html:103
-#, fuzzy
-#| msgid "Product For You"
 msgid "Product"
-msgstr "Maxsulotlarimiz siz uchun"
+msgstr "Maxsulot"
 
 #: .\templates\layout\footer.html:105
 msgid "Prices drop"
